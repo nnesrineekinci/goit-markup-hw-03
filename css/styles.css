@@ -1,7 +1,12 @@
 body {
+  margin: 0;
   font-family: "Roboto", sans-serif;
   color: #434455;
   background-color: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 a {
@@ -10,31 +15,13 @@ a {
 
 ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 button {
   cursor: pointer;
-}
-
-header {
-  border-bottom: 1px solid #e7e9fc;
-}
-
-nav,
-address {
-  font-size: 16px;
-}
-
-nav a,
-address a {
-  color: #2e2f42;
-}
-
-nav a:hover,
-nav a:focus,
-address a:hover,
-address a:focus {
-  color: #404bbf;
+  border: none;
 }
 
 h1,
@@ -44,16 +31,78 @@ p {
   margin: 0;
 }
 
-button {
-  border: none;
+/* HEADER */
+
+header {
+  width: 1158px;
+  height: 72px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 76px;
+}
+
+header nav > a {
+  color: #2e2f42;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  line-height: 1.17;
+  font-weight: 700;
+}
+
+header nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+header nav ul a {
+  color: #2e2f42;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+header address {
+  font-style: normal;
+}
+
+header address ul {
+  display: flex;
+  gap: 40px;
+}
+
+header address a {
+  color: #434455;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+header a:hover,
+header a:focus {
+  color: #404bbf;
+}
+
+header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+/* HERO */
 
 main > section:first-child {
   background-color: #2e2f42;
   text-align: center;
+  padding: 188px 0;
 }
 
 main > section:first-child h1 {
+  max-width: 900px;
+  margin: 0 auto 48px;
   color: #ffffff;
   font-size: 56px;
   line-height: 1.07;
@@ -61,6 +110,9 @@ main > section:first-child h1 {
 }
 
 main > section:first-child button {
+  min-width: 169px;
+  padding: 16px 32px;
+  border-radius: 4px;
   background-color: #4d5ae5;
   color: #ffffff;
   font-size: 16px;
@@ -73,10 +125,33 @@ main > section:first-child button:focus {
   background-color: #404bbf;
 }
 
-main h2 {
-  color: #2e2f42;
-  font-size: 36px;
-  line-height: 1.11;
+/* FEATURES */
+
+main > section:nth-child(2) {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+main > section:nth-child(2) h2 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+main > section:nth-child(2) ul {
+  display: flex;
+  gap: 24px;
+}
+
+main > section:nth-child(2) li {
+  width: 264px;
 }
 
 main h3 {
@@ -92,11 +167,113 @@ main p {
   line-height: 1.5;
 }
 
-footer {
-  background-color: #2e2f42;
+main > section:nth-child(2) h3 {
+  margin-bottom: 8px;
 }
 
-footer a {
+/* TEAM */
+
+main > section:nth-child(3) {
+  background-color: #f4f4fd;
+  padding: 120px 0;
+}
+
+main > section:nth-child(3) h2,
+main > section:nth-child(4) h2 {
+  color: #2e2f42;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+main > section:nth-child(3) > ul {
+  width: 1158px;
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+}
+
+main > section:nth-child(3) > ul > li {
+  width: 264px;
+  background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow:
+    0 2px 1px rgba(46, 47, 66, 0.08),
+    0 1px 1px rgba(46, 47, 66, 0.16),
+    0 1px 6px rgba(46, 47, 66, 0.08);
+}
+
+main > section:nth-child(3) img {
+  display: block;
+  width: 264px;
+  height: 260px;
+  object-fit: cover;
+}
+
+main > section:nth-child(3) h3 {
+  margin-top: 32px;
+  margin-bottom: 8px;
+}
+
+main > section:nth-child(3) p {
+  margin-bottom: 32px;
+}
+
+/* PORTFOLIO */
+
+main > section:nth-child(4) {
+  width: 1158px;
+  margin: 0 auto;
+  padding: 120px 0;
+}
+
+main > section:nth-child(4) > ul {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 48px;
+}
+
+main > section:nth-child(4) > ul > li {
+  width: 360px;
+  border: 1px solid #e7e9fc;
+  background-color: #ffffff;
+}
+
+main > section:nth-child(4) img {
+  display: block;
+  width: 358px;
+  height: 300px;
+  object-fit: cover;
+}
+
+main > section:nth-child(4) h3 {
+  margin: 32px 16px 8px;
+}
+
+main > section:nth-child(4) p {
+  margin: 0 16px 32px;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #2e2f42;
+  padding: 100px 0;
+}
+
+footer > a,
+footer > p {
+  display: block;
+  width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer > a {
   color: #4d5ae5;
   font-family: "Raleway", sans-serif;
   font-size: 18px;
@@ -105,5 +282,7 @@ footer a {
 }
 
 footer p {
+  max-width: 264px;
+  margin-top: 16px;
   color: #f4f4fd;
 }
